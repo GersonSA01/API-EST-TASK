@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API TAREAS-ESTUDIANTES</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./img/focoSolo.png">
+
+</head>
+<body>
+    <main>
+        <div class="contenedor">
+            <div class="header">
+                <img src="./img/logo (2).png" alt="">
+                <h1 class="estudiantes">Documentacion de API</h1>
+            </div>
+
+            <div class="introduccion">
+                <h1 class="intro">Introduccion</h1>
+                <p class="parrafo">
+                    En esta documentación le ayudaremos a familiarizarse con los recursos de la API de Estudiantes y Tareas, le muestra cómo realizar diferentes consultas, para que pueda aprovecharlas al máximo.</p>
+            </div>
+
+            <div class="base">
+                <div class="base-texto">
+                    <h3>URL base:</h3>
+                    <a href="http://localhost:3005/">http://localhost:3005/</a>
+                    <p class="parrafo">
+                        La URL base contiene la pagina principal
+                    </p>
+                </div>
+                <div class="base-img">                    
+                <img src="./img/base.png" alt="">  
+                </div>       
+            </div>
+            
+            <h1 class="estudiantes">API ESTUDIANTES</h1>
+
+
+            <div class="tarjeta url">
+                <div class="url-img">
+                    <img src="./img/todosEstudiantes.png" alt="">     
+                </div>
+
+                <div class="url-texto">
+                    <h3>URL TODOS LOS ESTUDIANTES:</h3>
+                <a href="http://localhost:3005/api/estudiante">http://localhost:3005/api/estudiante</a>
+                <p class="parrafo">
+                    La URL contiene información sobre todos los recursos de API disponibles. Todas las solicitudes son GET solicitudes. 
+                    <br>Todas las respuestas devolverán datos en formato json. Por cada Estudiante podrá ver :<br>
+                    <ul>
+                        <li>Cedula</li>
+                        <li>Nombre</li>
+                        <li>Nota 1</li>
+                        <li>Nota 2</li>
+                    </ul>
+                </p>
+                </div>              
+        
+            </div>
+            
+            <div class="tarjeta url1">
+                <div class="url1-texto">
+                    <h3>URL SOLO UN ESTUDIANTE:</h3>
+                <a href="http://localhost:3005/api/estudiante/0706191558">http://localhost:3005/api/estudiante/0706191558</a>
+                <p class="parrafo">
+                    La URL contiene información sobre un solo estudiante, dependiendo del numero de cedula que se ingrese, se mostrara la informacion del estudiante con la cedula ingresada.
+                </p>  
+                </div>
+                <div class="url-img">
+                    <img src="./img/url1.png" alt="">     
+                </div>
+                
+            </div>
+
+
+            <div class="tarjeta Nom1">
+                <div class="url-img">
+                    <img src="./img/buscarNombre.png" alt="">     
+                </div>
+
+                <div class="urlNom1-texto">
+                    <h3>BUSCAR POR NOMBRE:</h3>
+                <a href="http://localhost:3005/api/estudiante?nombre=Andy">http://localhost:3005/api/estudiante?nombre=Andy</a>
+                <p class="parrafo">
+                    Esta URL se encarga de buscar al los estudiantes por nombre.
+                </p>  
+                </div>                
+            </div>
+
+
+            <div class="tarjeta urlPag">
+
+                <div class="urlPag-texto">
+                    <h3>URL PAGINACION:</h3>
+                <a href="http://localhost:3005/api/estudiante?page=0&size=2">http://localhost:3005/api/estudiante?page=0&size=2</a>
+                <p class="parrafo">
+                    La URL clasifica la informacion por paginas, se agregan dos atibutos al link: <b>page</b> (la pagina en la que se encuentra) y <b>size</b> (numero de elementos que se encuentra en esa pagina)
+                </p>  
+                </div> 
+                
+                <div class="url-img">
+                    <img src="./img/sizeEst.png" alt="">     
+                </div>
+            </div>
+
+            <div class="tarjeta urlNom">
+                <div class="url-img">
+                    <img src="./img/EstNom.png" alt="">     
+                </div>
+
+                <div class="urlPag-texto">
+                    <h3>BUSCAR POR NOMBRE EN UNA PAGINA:</h3>
+                <a href="http://localhost:3005/api/estudiante?page=0&size=2&nombre=Angeles">http://localhost:3005/api/estudiante?page=0&size=2&nombre=Angeles</a>
+                <p class="parrafo">
+                    Esta URL se encarga de buscar por nombre al estudiante en la pagina deseada
+                </p>  
+                </div>                
+            </div>
+
+
+            <h1 class="estudiantes">API TASK</h1>
+
+
+            <div class="tarjeta task">
+                <div class="task-texto">
+                    <h3>URL TASKS:</h3>
+                <a href="http://localhost:3005/api/task">http://localhost:3005/api/task</a>
+                <p class="parrafo">
+                    Esta URL nos presenta informacion sobre todas las tareas que estan asignadas
+                    <br>Todas las respuestas devolverán datos en formato json. Por cada Tarea se podrá visualizar :<br>
+                    <ul>
+                        <li>tittle:"Se presenta el titulo de la tarea"</li>
+                        <li>description:"Se presenta la descripcion de la tarea"</li>
+                        <li>done:"Se presenta si la tarea ha sido realizada "</li>
+                    </ul>
+                </p>          
+
+                </div>
+                    <div class="url-img">
+                        <img src="./img/Ver todas las tareas.png" alt="">     
+                    </div>
+            </div>
+
+
+
+            <div class="tarjeta titulo">
+                <div class="url-img">
+                    <img src="./img/tareas por titulo.png" alt="">     
+                </div>
+                <div class="titulo-texto">
+                    <h3>URL PARA PRESENTAR TAREAS POR TITULO:</h3>
+                    <a href="http://localhost:3005/api/task?page=0&size=5&title=tarea numero uno">http://localhost:3005/api/task?page=0&size=5&title=tarea numero uno</a>
+                    <p class="parrafo">
+                        Este url nos presenta las tareas que tenga el titulo(En este caso el titulo asignado) y en que pagina esta ubicado
+                        <br>Todas las respuestas devolverán datos en formato json. Por cada Tarea se podrá visualizar :<br>
+                        <ul>
+                            <li>tittle:"Se presenta el titulo especifico de la tarea"</li>
+                            <li>description:"Se presenta la descripcion de la tarea"</li>
+                            <li>done:"Se presenta si la tarea ha sido  realizada "</li>
+                        </ul>
+                    </p>      
+                </div>    
+
+            </div>
+
+
+
+
+            <div class="tarjeta task">
+            <div class="texto-pagina">
+                <h3>URL PARA PRESENTAR POR NUMERO DE ITEMS:</h3>
+                <a href="http://localhost:3005/api/task?page=0&size=1">http://localhost:3005/api/task?page=0&size=1</a>
+                <p class="parrafo">
+                    Este url nos presenta un numero de tareas que se especifique en el link mediante el size
+                    <br>Todas las respuestas devolverán datos en formato json. Se podran visualizar un numero de tareas :<br>
+                </p>    
+            </div>
+            <div class="url-img">
+                <img src="./img/cuantas tareas presentar con size.png" alt="">     
+            </div>
+            </div>
+
+            <div class="tarjeta task id">
+                <div class="url-img">
+                    <img src="./img/buscar por id.png" alt="">     
+                </div>
+                <div class="texto-id">
+                    <h3>URL PARA PRESENTAR MEDIANTE EL ID:</h3>
+                    <a href="http://localhost:3005/api/task/64b0762605253069fcd94133">http://localhost:3005/api/task/64b0762605253069fcd94133</a>
+                    <p class="parrafo">
+                        Este url nos presenta las tareas mediante el id unico que tienen
+                        <br>Todas las respuestas devolverán datos en formato json. Se podran visualizar las tareas mediante el id :<br>              
+                    </p>     
+                </div>
+
+            </div>
+
+
+
+            <div class="tarjeta task true">
+
+                <div class="texto-true">
+                    <h3>URL PARA PRESENTAR TAREAS QUE ESTEN VERIFICADAS:</h3>
+                    <a href="http://localhost:3005/api/task/done">http://localhost:3005/api/task/done</a>
+                    <p class="parrafo">
+                        Este url nos presenta las tareas que tengan la propiedad "true"
+                        <br>Todas las respuestas devolverán datos en formato json. Se podran visualizar las tareas que esten validadas :<br>              
+                    </p>     
+                </div>
+
+                <div class="url-img">
+                    <img src="./img/los que tienen done como true.png" alt="">     
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </main>
+    
+</body>
+</html>

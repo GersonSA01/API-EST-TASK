@@ -1,0 +1,33 @@
+###
+GET http://localhost:3005/api/estudiante
+
+###
+GET http://localhost:3005/api/estudiante?page=0&size=1&nombre=Gerson
+
+###
+POST http://localhost:3005/api/estudiante
+Content-Type: application/json
+
+{
+    "nombre": "angeles",
+    "cedula": "1201709688", 
+    "nota1": "20",
+    "nota2": "40"
+}
+
+###
+GET http://localhost:3005/api/estudiante/1201709688
+
+###
+DELETE http://localhost:3005/api/estudiante/1201709688
+
+###
+DELETE http://localhost:3005/api/estudiante
+
+### 
+PUT http://localhost:3005/api/estudiante/1201709688
+Content-Type: application/json
+
+{
+    "nombre":"Gerson"
+}

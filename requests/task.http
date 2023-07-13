@@ -1,0 +1,32 @@
+###
+GET http://localhost:3005/api/task
+
+###
+GET http://localhost:3005/api/task?page=1&size=5&title=wix
+
+###
+POST http://localhost:3005/api/task
+Content-Type: application/json
+
+{
+    "title":"Hacer un sitio web en turbo C",
+    "description":"trabajo de universidad",
+    "done": true
+}
+
+###
+GET http://localhost:3005/api/task/64ab12698a1973c29e4eedbb
+
+###
+DELETE http://localhost:3005/api/task/64ab09a78a1973c29e4eedb9
+
+###
+GET http://localhost:3005/api/task/done
+
+### 
+PUT http://localhost:3005/api/task/64ab12698a1973c29e4eedbb
+Content-Type: application/json
+
+{
+    "title":"Hacer un sitio web en C++"
+}
